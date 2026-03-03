@@ -1,0 +1,39 @@
+// examples/test_try.ns - Testing the '?' operator
+
+// 模拟一个可能失败的函数
+fn might_fail(should_succeed) {
+    if (should_succeed) {
+        return "Success!";
+    }
+    return null;
+}
+
+// 成功路径
+fn test_success() {
+    print("Testing success path...");
+    var result = might_fail(true)?;
+    print("Result: ", result);
+    return "Function completed";
+}
+
+// 失败路径
+fn test_failure() {
+    print("Testing failure path...");
+    var result = might_fail(false)?;
+    print("This line should not be printed.");
+    return "This should not be returned";
+}
+
+print("--- Running test_success ---");
+var success_result = test_success();
+print("test_success returned: ", success_result);
+
+print("");
+
+print("--- Running test_failure ---");
+var failure_result = test_failure();
+print("test_failure returned: ", failure_result);
+
+if (failure_result == null) {
+    print("Correctly caught null from '?' operator!");
+}

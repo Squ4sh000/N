@@ -1,0 +1,31 @@
+var x = 10;
+var y = 20;
+print("x + y = ", x + y);
+
+fn sayHello(name) {
+    print("Hello, ", name);
+    return "Greeted " + name;
+}
+
+var msg = sayHello("N Language");
+print("Message: ", msg);
+
+if (x < y) {
+    print("x is less than y");
+} else {
+    print("x is not less than y");
+}
+
+var i = 0;
+while (i < 3) {
+    print("i = ", i);
+    i = i + 1;
+}
+
+class Test {
+    var val = 100;
+}
+
+var t = Test();
+t.val = 200;
+print("t.val = ", t.val);

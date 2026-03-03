@@ -1,0 +1,21 @@
+// io.ns - N Language Standard I/O Library
+
+// 从控制台读取一行
+fn readLine(prompt) {
+    return input(prompt);
+}
+
+// 读取文件内容
+fn readAllText(path) {
+    return read_file(path);
+}
+
+// 写入文件内容
+fn writeAllText(path, text) {
+    return write_file(path, text);
+}
+
+// 简单的日志记录
+fn log(msg) {
+    print("[LOG] ", msg);
+}

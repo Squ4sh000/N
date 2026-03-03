@@ -1,0 +1,26 @@
+// examples/test_for_in.ns - Testing the 'for-in' loop
+
+print("--- 1. Iterating over an array ---");
+var fruits = ["apple", "banana", "cherry"];
+for (fruit in fruits) {
+    print("Fruit: ", fruit);
+}
+
+print("");
+print("--- 2. Iterating over a string ---");
+var msg = "N Lang";
+for (char in msg) {
+    print("Char: ", char);
+}
+
+print("");
+print("--- 3. Using 'var' in for-in ---");
+for (var i in [1, 2, 3]) {
+    print("Number: ", i);
+}
+
+print("");
+print("--- 4. Traditional for loop still works ---");
+for (var j = 0; j < 3; j = j + 1) {
+    print("j = ", j);
+}

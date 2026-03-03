@@ -1,0 +1,32 @@
+// examples/test_libs.ns - Testing new standard libraries
+import "lib/io.ns";
+import "lib/array.ns";
+
+print("--- Testing I/O Library ---");
+var content = "This is a test file content.";
+var path = "temp_test.txt";
+if (writeAllText(path, content)) {
+    log("Successfully wrote to " + path);
+    var readContent = readAllText(path);
+    print("Read from file: ", readContent);
+} else {
+    log("Failed to write to " + path);
+}
+
+print("");
+print("--- Testing Array Library (Simulation) ---");
+var arr = Array();
+arr.push(10);
+arr.push("Hello");
+arr.push(true);
+arr.push(3.14);
+
+print("Array length: ", arr.length());
+print("Element at index 1: ", arr.get(1));
+print("Element at index 3: ", arr.get(3));
+
+arr.printAll();
+
+for (var i = 0; i < arr.length(); i = i + 1) {
+    print("Index ", i, ": ", arr.get(i));
+}

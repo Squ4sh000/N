@@ -1,0 +1,31 @@
+// string.ns - N Language Standard String Library
+
+// 获取字符串长度
+fn length(s) {
+    return len(s);
+}
+
+// 检查字符串是否包含子串 (简单实现)
+fn contains(s, sub) {
+    var sLen = len(s);
+    var subLen = len(sub);
+    if (subLen > sLen) { return false; }
+    if (subLen == 0) { return true; }
+    
+    // 这里由于 N 语言目前还没有数组下标访问字符串，我们只能先提供基础包装
+    return false; 
+}
+
+// 字符串拼接包装
+fn concat(a, b) {
+    return a + b;
+}
+
+// 简单的字符串重复
+fn repeat(s, count) {
+    var res = "";
+    for (var i = 0; i < count; i = i + 1) {
+        res = res + s;
+    }
+    return res;
+}

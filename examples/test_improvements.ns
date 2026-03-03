@@ -1,0 +1,33 @@
+// examples/test_improvements.ns - Testing native arrays, nested printing, and optimized errors
+
+print("--- 1. Native Array Literals & Nested Printing ---");
+var nested = [1, [2, 3], "N", true];
+print("Nested array: ", nested);
+print("nested[1]: ", nested[1]);
+print("nested[1][0]: ", nested[1][0]);
+
+print("");
+print("--- 2. Native Push ---");
+var myArr = [];
+push(myArr, "Item 1");
+push(myArr, 42);
+print("myArr: ", myArr);
+
+print("");
+print("--- 3. String Indexing ---");
+var s = "N Language";
+print("s[0]: ", s[0]);
+print("s[2]: ", s[2]);
+
+print("");
+print("--- 4. Error Optimization ---");
+// Test division by zero
+print(10 / 0);
+
+// Test calling non-function
+// var x = 10;
+// x();
+
+// Test property on non-instance
+// var y = "string";
+// y.prop = 10;

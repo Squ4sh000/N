@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N Language - 现代、轻量、表现力丰富的脚本语言</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="images/logo.svg" alt="N Language Logo">
+                    <span>N Language</span>
+                </div>
+                <ul>
+                    <li><a href="#features">特性</a></li>
+                    <li><a href="#docs">文档</a></li>
+                    <li><a href="https://github.com/Squ4sh000/N" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>为现代开发而生的<br><span class="highlight">表现力</span>脚本语言</h1>
+                <p class="tagline">轻量级、自驱动、原生支持错误传递与集合迭代。</p>
+                <div class="actions">
+                    <a href="https://github.com/Squ4sh000/N/releases" class="btn primary">立即下载 v1.0.0</a>
+                    <a href="#docs" class="btn secondary">快速上手</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">?</div>
+                        <h3>错误传递运算符</h3>
+                        <p>使用 <code>?</code> 运算符实现优雅的错误冒泡，彻底告别冗长的 <code>if (err != null)</code>。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🔄</div>
+                        <h3>原生集合迭代</h3>
+                        <p>支持 <code>for-in</code> 语法，无论是数组还是字符串，都能以最直观的方式进行遍历。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">📦</div>
+                        <h3>原生性能</h3>
+                        <p>基于 C 语言开发的解释器，内置高效数组支持，提供极致的运行效率。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="docs" class="showcase">
+            <div class="container">
+                <div class="showcase-header">
+                    <h2>感受 N 语言的优雅</h2>
+                    <p>简洁的语法，强大的表达力。</p>
+                </div>
+                <div class="code-container">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="filename">main.ns</span>
+                        </div>
+                        <pre><code><span class="keyword">fn</span> <span class="function">load_config</span>(path) {
+    <span class="keyword">var</span> content = <span class="function">read_file</span>(path)<span class="operator">?</span>;
+    <span class="keyword">var</span> config = <span class="function">json_decode</span>(content)<span class="operator">?</span>;
+    <span class="keyword">return</span> config;
+}
+
+<span class="keyword">var</span> fruits = [<span class="string">"apple"</span>, <span class="string">"banana"</span>, <span class="string">"cherry"</span>];
+<span class="keyword">for</span> (fruit <span class="keyword">in</span> fruits) {
+    <span class="function">print</span>(<span class="string">"I love: "</span>, fruit);
+}</code></pre>
+                    </div>
+                    <div class="code-info">
+                        <h3>核心亮点展示</h3>
+                        <ul>
+                            <li><strong>? 运算符</strong>：如果 <code>read_file</code> 失败返回 <code>null</code>，当前函数立即返回 <code>null</code>。</li>
+                            <li><strong>for-in 循环</strong>：原生支持对数组进行迭代。</li>
+                            <li><strong>内置库</strong>：自带数学、字符串、I/O 等核心标准库。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 N Language. Designed by <a href="https://github.com/Squ4sh000">Squ4sh000</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>

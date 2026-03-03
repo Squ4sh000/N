@@ -1,0 +1,4 @@
+// utils.ns
+fn multiply(a, b) {
+    return a * b;
+}

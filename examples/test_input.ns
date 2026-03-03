@@ -1,0 +1,9 @@
+// examples/test_input.ns - Testing user input
+import "lib/io.ns";
+
+print("--- Interactive N Language ---");
+var name = readLine("What is your name? ");
+print("Hello, ", name, "!");
+
+var ageStr = readLine("How old are you? ");
+print("You are ", ageStr, " years old.");

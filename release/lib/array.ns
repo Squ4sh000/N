@@ -1,0 +1,54 @@
+// array.ns - N Language Standard Array Library (Linked List Simulation)
+
+class ArrayNode {
+    var value = null;
+    var next = null;
+}
+
+class Array {
+    var head = null;
+    var size = 0;
+
+    fn push(val) {
+        var newNode = ArrayNode();
+        newNode.value = val;
+        
+        if (self.head == null) {
+            self.head = newNode;
+        } else {
+            var curr = self.head;
+            while (curr.next != null) {
+                curr = curr.next;
+            }
+            curr.next = newNode;
+        }
+        self.size = self.size + 1;
+    }
+
+    fn get(index) {
+        if (index < 0) { return null; }
+        if (index >= self.size) { return null; }
+        
+        var curr = self.head;
+        var i = 0;
+        while (i < index) {
+            curr = curr.next;
+            i = i + 1;
+        }
+        return curr.value;
+    }
+
+    fn length() {
+        return self.size;
+    }
+
+    fn printAll() {
+        var curr = self.head;
+        print("Array: [");
+        while (curr != null) {
+            print("  ", curr.value);
+            curr = curr.next;
+        }
+        print("]");
+    }
+}

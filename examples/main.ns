@@ -1,0 +1,42 @@
+// main.ns
+import "examples/utils.ns";
+
+const PI = 3.1415926;
+
+fn add(a, b) {
+    return a + b;
+}
+
+class Person {
+    var name = "N";
+    var age = 0;
+
+    fn greet() {
+        print("Hello, " + self.name);
+    }
+}
+
+fn main() {
+    var x = 10;
+    var y = 20;
+    var result = add(x, y);
+    print("Result: " + result);
+
+    if (result > 25) {
+        print("Greater than 25");
+    } else {
+        print("Less than or equal to 25");
+    }
+
+    var i = 0;
+    while (i < 5) {
+        print("Loop " + i);
+        i = i + 1;
+    }
+
+    var p = Person();
+    p.name = "N Language";
+    p.greet();
+}
+
+main();

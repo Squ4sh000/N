@@ -1,0 +1,15 @@
+// examples/test_lib.ns - Testing standard library import
+import "lib/math.ns";
+
+print("Testing Math Library:");
+
+var a = -10;
+var b = 25;
+
+print("abs(", a, ") = ", abs(a));
+print("square(", a, ") = ", square(a));
+print("max(", a, ", ", b, ") = ", max(a, b));
+print("min(", a, ", ", b, ") = ", min(a, b));
+
+var result = max(square(abs(a)), b);
+print("max(square(abs(", a, ")), ", b, ") = ", result);

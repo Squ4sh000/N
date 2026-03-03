@@ -1,0 +1,26 @@
+// examples/test_native_array.ns - Testing native arrays and error reporting
+
+print("--- Testing Native Arrays ---");
+var arr = [10, 20, "N Language"];
+print("Array length: ", len(arr));
+print("Element at index 0: ", arr[0]);
+print("Element at index 2: ", arr[2]);
+
+arr[1] = 99;
+print("Modified element at index 1: ", arr[1]);
+
+push(arr, "New Element");
+print("After push, length: ", len(arr));
+print("Last element: ", arr[3]);
+
+print("");
+print("--- Testing String Indexing ---");
+var s = "Hello";
+print("String: ", s);
+print("s[0]: ", s[0]);
+print("s[4]: ", s[4]);
+
+print("");
+print("--- Testing Error Reporting ---");
+const PI = 3.14;
+PI = 3.15; // Should trigger runtime error

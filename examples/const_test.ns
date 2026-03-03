@@ -1,0 +1,3 @@
+const PI = 3.14;
+print("PI: ", PI);
+PI = 3.14159; // Error
